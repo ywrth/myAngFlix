@@ -13,10 +13,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
+import { UserRegistrationFormComponent } from './user-registration-form/user-registration-form.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserRegistrationFormComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
