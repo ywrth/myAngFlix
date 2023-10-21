@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FetchApiDataService } from '../fetch-api-data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialogRef } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-form',
@@ -15,7 +16,8 @@ export class LoginFormComponent implements OnInit {
   constructor(
     public fetchApiData: FetchApiDataService,
     public dialogRef: MatDialogRef<LoginFormComponent>,
-    public snackBar: MatSnackBar
+    public snackBar: MatSnackBar,
+    private router: Router
   ) { }
 
   ngOnInit(): void { }
@@ -27,6 +29,8 @@ export class LoginFormComponent implements OnInit {
             localStorage.setItem('token', result.token); // assuming the response contains the token in a field named 'token'
             localStorage.setItem('username', this.loginData.Username);
             this.snackBar.open('Login successful!', 'OK', { duration: 2000 });
+            this.router.navigate(['movies']);
+            
         },
         error: (result) => {
             this.snackBar.open(result.error.message, 'OK', { duration: 2000 }); // assuming the error response has a message field

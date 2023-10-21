@@ -1,0 +1,13 @@
+.movie-dialog-content {
+    max-height: 70vh;  // Adjust this value based on your preference
+    overflow-y: auto;
+}
+
+mat-icon {
+    &.liked {
+      color: red;
+    }
+    &.hovered {
+      color: lightcoral; // or any other color you want for hover effect
+    }
+  }
