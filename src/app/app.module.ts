@@ -4,8 +4,6 @@ import {HttpClientModule} from '@angular/common/http'; // <-- Import HttpClientM
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -22,6 +20,12 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MatIcon, MatIconModule} from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { NavbarComponent } from './navbar/navbar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InfoDialogComponent } from './info-dialog/info-dialog.component';
+
 
 
 
@@ -37,7 +41,10 @@ const appRoutes: Routes = [
     UserRegistrationFormComponent,
     LoginFormComponent,
     MovieCardComponent,
-    WelcomePageComponent
+    WelcomePageComponent,
+    UserProfileComponent,
+    NavbarComponent,
+    InfoDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +60,8 @@ const appRoutes: Routes = [
     MatIconModule,
 MatTooltipModule,
     FormsModule, 
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    MatToolbarModule
   ],
   providers: [
     {

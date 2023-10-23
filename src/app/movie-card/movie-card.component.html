@@ -1,41 +1,41 @@
-<div style="display: flex;">
-    <mat-card *ngFor="let movie of movies;" style="flex: 1 1 auto;">
+<div style="display: flex; overflow-x: auto;">
+    <mat-card *ngFor="let movie of movies;" style="flex: 0 0 auto; margin-right: 20px;">
+        <!-- Image first -->
+        <img class="movie-image" src="{{movie.ImageURL}}" alt="{{movie.Title}}" />
+
+        <!-- Then the title and director's name -->
         <mat-card-header>
-        <mat-card-title>{{movie.Title}}</mat-card-title>
+            <mat-card-title>{{movie.Title}}</mat-card-title>
+            <mat-card-subtitle> Genre: {{movie.Genre.Name}}</mat-card-subtitle>
             <mat-card-subtitle>Directed by: {{movie.Director.Name}}</mat-card-subtitle>
         </mat-card-header>
-        <img src={{movie.ImageURL}} alt= {{movie.Title}} />
         <mat-card-actions>
-            <button
-                mat-button
-                color="primary"
-            >
-                Genre
-            </button>
-            <button
-                mat-button
-                color="primary"
-            >
-                Director
-            </button>
-            <button
-            mat-button
-            color="primary"
-            [matTooltip]="movie.Description"
-        >
+            <button 
+            mat-button 
+            color="primary" 
+            [matTooltip]="movie.Genre.Description" 
+            (click)="openInfoDialog(movie.Genre.Name, movie.Genre.Description)">
+            Genre
+        </button>
+        <button 
+            mat-button 
+            color="primary" 
+            [matTooltip]="movie.Director.Bio" 
+            (click)="openInfoDialog(movie.Director.Name, movie.Director.Bio)">
+            Director
+        </button>
+        <button 
+            mat-button 
+            color="primary" 
+            [matTooltip]="movie.Description" 
+            (click)="openInfoDialog('Synopsis', movie.Description)">
             Synopsis
         </button>
-        <mat-icon 
-        [ngClass]="{
-          'liked': likedMovies[movie._id],
-          'hovered': hoveredMovieId === movie._id && !likedMovies[movie._id]
-        }"
-        (mouseover)="hoverIcon(movie._id, true)"
-        (mouseout)="hoverIcon(movie._id, false)"
-        (click)="addToFavorites(movie._id); toggleLike(movie._id)"
-      >
-        favorite_border
-      </mat-icon>
-    </mat-card-actions>
+        
+            
+            <span (click)="toggleFavorite(movie)">
+              <mat-icon [style.color]="isFavorite(movie._id) ? 'red' : 'gray'">favorite</mat-icon>
+            </span>
+        </mat-card-actions>
     </mat-card>
 </div>
