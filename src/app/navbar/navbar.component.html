@@ -1,7 +1,0 @@
-<mat-toolbar color="primary">
-  <span>HotPotatoes</span>
-  <span class="spacer"></span>
-  <button *ngIf="isLoggedIn" mat-button routerLink="/movies">Movies</button>
-  <button *ngIf="isLoggedIn" mat-button routerLink="/profile">Profile</button>
-  <button *ngIf="isLoggedIn" mat-button (click)="onLogout()">Logout</button>
-</mat-toolbar>
