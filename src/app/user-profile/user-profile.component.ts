@@ -29,7 +29,7 @@ export class UserProfileComponent implements OnInit {
   ngOnInit(): void {
     this.initializeForm();
     this.getUserData();
-    this.getUserFavorites();
+    this.getFavoriteMovies();
   }
 
   private initializeForm(): void {
@@ -73,35 +73,38 @@ export class UserProfileComponent implements OnInit {
     }
   }
 
-  getUserFavorites(): void {
+  getFavoriteMovies(): void {
     this.fetchApiData.getFavoriteMovies().subscribe(
-      (favoriteMovieIds: string[]) => {
-        if (favoriteMovieIds.length) {
-          const movieRequests = favoriteMovieIds.map(movieId => this.fetchApiData.getMovieById(movieId));
-          forkJoin(movieRequests).subscribe(
-            (favoriteMovies) => {
-              this.userFavoriteMovies = favoriteMovies;
-            },
-            (error) => {
-              console.error('Error fetching favorite movies:', error);
-              this.snackBar.open('Error fetching favorite movies', 'OK', { duration: 2000 });
-            }
-          );
-        } else {
-          this.userFavoriteMovies = [];
-        }
+      (favoriteMovieIds) => {
+        // Assuming the response is an array of movie IDs
+        this.userFavoriteMovies = favoriteMovieIds;
       },
       (error) => {
-        console.error('Error fetching favorite movie IDs:', error);
+        console.error('Error fetching favorite movies:', error);
         this.snackBar.open('Error fetching favorite movies', 'OK', { duration: 2000 });
       }
     );
   }
 
 isFavorite(movieId: string): boolean {
-  return this.userFavoriteMovies.includes(movieId);
+  return this.userFavoriteMovies.some(movie => movie._id === movieId);
 }
 
+removeFavorite(movieId: string): void {
+  const username = localStorage.getItem('username');
+  if (username) {
+    this.fetchApiData.removeFromFavorites(username, movieId).subscribe({
+      next: (response) => {
+        // Update local list of favorite movies
+        this.userFavoriteMovies = this.userFavoriteMovies.filter(movie => movie._id !== movieId);
+        this.snackBar.open('Movie removed from favorites!', 'OK', { duration: 2000 });
+      },
+      error: (error) => this.snackBar.open(error, 'OK', { duration: 2000 }),
+    });
+  } else {
+    this.snackBar.open('Username not found!', 'OK', { duration: 2000 });
+  }
+}
 
   enableEditMode(): void {
     this.editMode = true;

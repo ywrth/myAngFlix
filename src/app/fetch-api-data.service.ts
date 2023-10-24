@@ -59,9 +59,9 @@ export class FetchApiDataService {
   // Making the api call for the get a single movie endpoint
   getMovieById(movieId: string): Observable<any> {
     const token = localStorage.getItem('token');
-    return this.http.get(apiUrl + 'movies/' + movieId, {
+    return this.http.get(`${apiUrl}movies/${movieId}`, {
       headers: new HttpHeaders({
-        Authorization: 'Bearer ' + token,
+        Authorization: `Bearer ${token}`,
       }),
     })
     .pipe(
@@ -108,27 +108,21 @@ export class FetchApiDataService {
       }).pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
-  // Making the api call for the get favourite movies for a user endpoint
-  getFavoriteMovies(): Observable<any> {
-    const username = localStorage.getItem('username');
-    const token = localStorage.getItem('token');
-    return this.http.get(apiUrl + 'users/' + username, {
-        headers: new HttpHeaders({
-            Authorization: 'Bearer ' + token
-        })
-    }).pipe(
-        tap(response => {
-            console.log('Fetched User Data:', response);
-        }),
-        map(this.extractResponseData),
-        map((data) => {
-            console.log('Extracted Favorite Movies:', data.FavoriteMovies);
-            return data.FavoriteMovies;
-        }),
-        catchError(this.handleError)
-    );
-
-    
+// Making the api call to get favorite movies for a user endpoint
+getFavoriteMovies(): Observable<string[]> {
+  const username = localStorage.getItem('username');
+  const token = localStorage.getItem('token');
+  return this.http.get(apiUrl + 'users/' + username + '/favoriteMovies', {
+      headers: new HttpHeaders({
+          Authorization: 'Bearer ' + token
+      })
+  }).pipe(
+      tap(response => {
+          console.log('Fetched Favorite Movies:', response);
+      }),
+      map(this.extractResponseData),
+      catchError(this.handleError)
+  );
 }
 
   // Making the api call for the add a movie to favourite Movies endpoint
@@ -147,21 +141,8 @@ export class FetchApiDataService {
     });
   }
 
-  getFavoriteMoviesDetails(): Observable<any> {
-    return this.getFavoriteMovies().pipe(
-      // switchMap switches the context from movie IDs to movie details
-      switchMap((movieIds: string[]) => {
-        // If no favorite movies, return an empty array immediately
-        if (!movieIds.length) {
-          return of([]);
-        }
-  
-        // Using forkJoin to fetch details of all favorite movies
-        const allRequests = movieIds.map(movieId => this.getMovieById(movieId));
-        return forkJoin(allRequests);
-      })
-    );
-  }
+
+
   
 
   // Making the api call for the edit user endpoint

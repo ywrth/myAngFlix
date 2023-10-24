@@ -3,13 +3,13 @@
   <p>Email: {{ userData?.Email }}</p>
   <p>Date of Birth: {{ userData?.Birthday | date }}</p>
 
-  <!-- Favorite Movies Section -->
+<!-- Favorite Movies Section -->
 <h3>Favorite Movies:</h3>
 <ul *ngIf="userFavoriteMovies && userFavoriteMovies.length">
   <li *ngFor="let favoriteMovie of userFavoriteMovies">
     {{ favoriteMovie?.Title }}
-</li>
-
+    <button mat-stroked-button (click)="removeFavorite(favoriteMovie._id)">Remove</button>
+  </li>
 </ul>
 <p *ngIf="!userFavoriteMovies || !userFavoriteMovies.length">No favorite movies added yet.</p>
 <!-- End of Favorite Movies Section -->
