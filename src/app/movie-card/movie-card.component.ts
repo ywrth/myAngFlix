@@ -4,6 +4,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { InfoDialogComponent } from '../info-dialog/info-dialog.component';
+import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-movie-card',
@@ -14,6 +15,8 @@ export class MovieCardComponent implements OnInit {
   movies: any[] = [];
   likedMovies: { [key: string]: boolean } = {};
   hoveredMovieId: string | null = null;
+  userFavoriteMovies: any[] = [];
+
 
   constructor(
     private fetchApiData: FetchApiDataService,
@@ -23,8 +26,9 @@ export class MovieCardComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getMovies();
+      this.fetchMoviesAndFavorites();
   }
+ 
 
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
@@ -47,6 +51,27 @@ export class MovieCardComponent implements OnInit {
       this.addToFavorites(movie._id);
     }
   }
+
+
+  fetchMoviesAndFavorites(): void {
+    // Combine both API calls
+    forkJoin({
+      allMovies: this.fetchApiData.getAllMovies(),
+      favoriteMovies: this.fetchApiData.getFavoriteMovies()
+    }).subscribe(({ allMovies, favoriteMovies }) => {
+      this.movies = allMovies;
+      this.updateLikedMoviesBasedOnFavorites(favoriteMovies);
+    }, (error) => {
+      console.error('Error fetching movies or favorites:', error);
+      this.snackBar.open('Error fetching movies or favorites', 'OK', { duration: 2000 });
+    });
+  }
+
+updateLikedMoviesBasedOnFavorites(favoriteMovieIds: string[]): void {
+  for (const id of favoriteMovieIds) {
+    this.likedMovies[id] = true;
+  }
+}
 
   openInfoDialog(title: string, content: string): void {
     this.dialog.open(InfoDialogComponent, {
@@ -72,6 +97,20 @@ export class MovieCardComponent implements OnInit {
       },
     });
   }
+
+  // Add these properties:
+showModal: boolean = false;
+currentImageSrc: string = '';
+
+// And these methods:
+openImageModal(imageUrl: string): void {
+    this.currentImageSrc = imageUrl;
+    this.showModal = true;
+}
+
+closeImageModal(): void {
+    this.showModal = false;
+}
   
 
   // Remove a movie from favorites
