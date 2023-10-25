@@ -9,10 +9,19 @@ import { Router } from '@angular/router';
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.scss']
 })
+/**
+ * Component representing a login form.
+ */
 export class LoginFormComponent implements OnInit {
+  public loginData = { Username: '', Password: '' };
 
-  public loginData = { Username: '', Password: '' }; 
-
+  /**
+   * Constructs the login form component.
+   * @param fetchApiData Service to fetch data from API.
+   * @param dialogRef Reference to the login dialog.
+   * @param snackBar Snackbar for displaying messages.
+   * @param router Router service.
+   */
   constructor(
     public fetchApiData: FetchApiDataService,
     public dialogRef: MatDialogRef<LoginFormComponent>,
@@ -22,9 +31,12 @@ export class LoginFormComponent implements OnInit {
 
   ngOnInit(): void { }
 
+  /**
+   * Method to handle user login.
+   */
   loginUser(): void {
     this.fetchApiData.userLogin(this.loginData).subscribe({
-        next: (result) => {
+      next: (result) => {
             this.dialogRef.close();
             localStorage.setItem('token', result.token); // assuming the response contains the token in a field named 'token'
             localStorage.setItem('username', this.loginData.Username);

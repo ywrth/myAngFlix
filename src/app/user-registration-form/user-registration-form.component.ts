@@ -14,42 +14,49 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class UserRegistrationFormComponent implements OnInit {
 
+  /** 
+   * @name userData
+   * @description Holds the user data for the registration form.
+   */
   @Input() userData = { Username: '', Password: '', Email: '', Birthday: '' }; 
 
+  /** 
+   * @name constructor
+   * @description Initializes the UserRegistrationFormComponent with required services and dependencies.
+   * @param fetchApiData - Service for making API calls.
+   * @param dialogRef - Reference to the dialog opened.
+   * @param snackBar - Service for showing notifications to the user.
+   */
   constructor(
     public fetchApiData: FetchApiDataService,
     public dialogRef: MatDialogRef<UserRegistrationFormComponent>,
     public snackBar: MatSnackBar) { }
-    
-    ngOnInit(): void {
+
+  /** 
+   * @name ngOnInit
+   * @description Lifecycle hook that is called after data-bound properties are initialized.
+   */
+  ngOnInit(): void {
       
-    }
-// This is the function responsible for sending the form inputs to the backend
-registerUser(): void {
-  // Log the user's input data to the console
-  console.log("User registration data:", this.userData);
+  }
 
-  this.fetchApiData.userRegistration(this.userData).subscribe({
-    next: (result) => {
-      // Log the successful response to the console
-      console.log("Registration response:", result);
-
-      // Logic for a successful user registration goes here!
-      this.dialogRef.close(); // This will close the modal on success!
-      this.snackBar.open(result, 'OK', {
-        duration: 2000
-      });
-    },
-    error: (errorResponse) => {
-      // Log the detailed error response to the console
-      console.log("Detailed error:", errorResponse.error);
-    
-      // Display the error message (assuming errorResponse.error contains the message)
-      this.snackBar.open(errorResponse.error, 'OK', {
-        duration: 2000
-      });
-    }
-  });
+  /** 
+   * @name registerUser
+   * @description Sends user registration data to the backend.
+   */
+  registerUser(): void {
+    this.fetchApiData.userRegistration(this.userData).subscribe({
+      next: (result) => {
+        this.dialogRef.close(); // This will close the modal on success!
+        this.snackBar.open(result, 'OK', {
+          duration: 2000
+        });
+      },
+      error: (errorResponse) => {
+        this.snackBar.open(errorResponse.error, 'OK', {
+          duration: 2000
+        });
+      }
+    });
+  }
 }
-}
-

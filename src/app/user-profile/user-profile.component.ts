@@ -5,8 +5,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Location } from '@angular/common';
 import { forkJoin } from 'rxjs';
 
-
-
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
@@ -26,12 +24,20 @@ export class UserProfileComponent implements OnInit {
     private location: Location
   ) {}
 
+  /** 
+   * @name ngOnInit
+   * @description Lifecycle hook that initializes the form and fetches user data and favorite movies.
+   */
   ngOnInit(): void {
     this.initializeForm();
     this.getUserData();
     this.getFavoriteMovies();
   }
 
+  /** 
+   * @name initializeForm
+   * @description Initializes the user profile form.
+   */
   private initializeForm(): void {
     this.profileForm = this.fb.group({
       Username: ['', [Validators.required, Validators.minLength(5), Validators.pattern(/^[a-zA-Z0-9]+$/)]],
@@ -41,6 +47,11 @@ export class UserProfileComponent implements OnInit {
     });
   }
 
+  /** 
+
+   * @name saveUserData
+   * @description Saves the user data if the form is valid.
+   */
   saveUserData(): void {
     if (this.profileForm.valid) {
       this.fetchApiData.updateUser(this.profileForm.value).subscribe({
@@ -56,7 +67,10 @@ export class UserProfileComponent implements OnInit {
     }
   }
 
-
+  /** 
+   * @name getUserData
+   * @description Fetches and sets user data from the API.
+   */
   getUserData(): void {
     const username = localStorage.getItem('username');
     if (username) {
@@ -73,6 +87,10 @@ export class UserProfileComponent implements OnInit {
     }
   }
 
+  /** 
+   * @name getFavoriteMovies
+   * @description Fetches and sets the list of favorite movies for the user.
+   */
   getFavoriteMovies(): void {
     this.fetchApiData.getFavoriteMovies().subscribe(
       (favoriteMovieIds) => {
@@ -86,30 +104,49 @@ export class UserProfileComponent implements OnInit {
     );
   }
 
-isFavorite(movieId: string): boolean {
-  return this.userFavoriteMovies.some(movie => movie._id === movieId);
-}
-
-removeFavorite(movieId: string): void {
-  const username = localStorage.getItem('username');
-  if (username) {
-    this.fetchApiData.removeFromFavorites(username, movieId).subscribe({
-      next: (response) => {
-        // Update local list of favorite movies
-        this.userFavoriteMovies = this.userFavoriteMovies.filter(movie => movie._id !== movieId);
-        this.snackBar.open('Movie removed from favorites!', 'OK', { duration: 2000 });
-      },
-      error: (error) => this.snackBar.open(error, 'OK', { duration: 2000 }),
-    });
-  } else {
-    this.snackBar.open('Username not found!', 'OK', { duration: 2000 });
+  /** 
+   * @name isFavorite
+   * @description Checks if a movie is marked as favorite by the user.
+   * @param movieId - The ID of the movie to check.
+   * @returns {boolean} - True if the movie is a favorite, otherwise false.
+   */
+  isFavorite(movieId: string): boolean {
+    return this.userFavoriteMovies.some(movie => movie._id === movieId);
   }
-}
 
+  /** 
+   * @name removeFavorite
+   * @description Removes a movie from the user's list of favorites.
+   * @param movieId - The ID of the movie to be removed.
+   */
+  removeFavorite(movieId: string): void {
+    const username = localStorage.getItem('username');
+    if (username) {
+      this.fetchApiData.removeFromFavorites(username, movieId).subscribe({
+        next: (response) => {
+          // Update local list of favorite movies
+          this.userFavoriteMovies = this.userFavoriteMovies.filter(movie => movie._id !== movieId);
+          this.snackBar.open('Movie removed from favorites!', 'OK', { duration: 2000 });
+        },
+        error: (error) => this.snackBar.open(error, 'OK', { duration: 2000 }),
+      });
+    } else {
+      this.snackBar.open('Username not found!', 'OK', { duration: 2000 });
+    }
+  }
+
+  /** 
+   * @name enableEditMode
+   * @description Enables the edit mode for the user profile form.
+   */
   enableEditMode(): void {
     this.editMode = true;
   }
 
+  /** 
+   * @name goBack
+   * @description Navigates the user to the previous page.
+   */
   goBack(): void {
     this.location.back();
   }
