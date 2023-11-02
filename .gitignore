@@ -4,6 +4,7 @@
 # Angular Build output
 /dist/
 /out-tsc/
+/myAngFlix.git/
 
 # Angular CLI cache (starting Angular v13)
 /.angular/
@@ -33,5 +34,6 @@ Thumbs.db
 *.env.local
 *.env.staging
 *.env.prod
+
 
 # End of .gitignore

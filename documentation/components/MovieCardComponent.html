@@ -1,0 +1,1770 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>my-angular-flix documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">my-angular-flix documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  MovieCardComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/movie-card/movie-card.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-movie-card</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./movie-card.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./movie-card.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#currentImageSrc" >currentImageSrc</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dialog" >dialog</a>
+                            </li>
+                            <li>
+                                <a href="#hoveredMovieId" >hoveredMovieId</a>
+                            </li>
+                            <li>
+                                <a href="#likedMovies" >likedMovies</a>
+                            </li>
+                            <li>
+                                <a href="#movies" >movies</a>
+                            </li>
+                            <li>
+                                <a href="#showModal" >showModal</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addToFavorites" >addToFavorites</a>
+                            </li>
+                            <li>
+                                <a href="#closeImageModal" >closeImageModal</a>
+                            </li>
+                            <li>
+                                <a href="#fetchMoviesAndFavorites" >fetchMoviesAndFavorites</a>
+                            </li>
+                            <li>
+                                <a href="#hoverIcon" >hoverIcon</a>
+                            </li>
+                            <li>
+                                <a href="#isFavorite" >isFavorite</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onLogout" >onLogout</a>
+                            </li>
+                            <li>
+                                <a href="#openImageModal" >openImageModal</a>
+                            </li>
+                            <li>
+                                <a href="#openInfoDialog" >openInfoDialog</a>
+                            </li>
+                            <li>
+                                <a href="#removeFromFavorites" >removeFromFavorites</a>
+                            </li>
+                            <li>
+                                <a href="#toggleFavorite" >toggleFavorite</a>
+                            </li>
+                            <li>
+                                <a href="#updateLikedMoviesBasedOnFavorites" >updateLikedMoviesBasedOnFavorites</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(fetchApiData: <a href="../injectables/FetchApiDataService.html" target="_self">FetchApiDataService</a>, snackBar: MatSnackBar, router: Router, dialog: MatDialog)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/movie-card/movie-card.component.ts:52</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>fetchApiData</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FetchApiDataService.html" target="_self" >FetchApiDataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>snackBar</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatSnackBar</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code>Router</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addToFavorites"></a>
+                    <span class="name">
+                        <span ><b>addToFavorites</b></span>
+                        <a href="#addToFavorites"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addToFavorites(movieId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="136"
+                                    class="link-to-prism">src/app/movie-card/movie-card.component.ts:136</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>movieId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>The ID of the movie to be added.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="closeImageModal"></a>
+                    <span class="name">
+                        <span ><b>closeImageModal</b></span>
+                        <a href="#closeImageModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>closeImageModal()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="181"
+                                    class="link-to-prism">src/app/movie-card/movie-card.component.ts:181</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fetchMoviesAndFavorites"></a>
+                    <span class="name">
+                        <span ><b>fetchMoviesAndFavorites</b></span>
+                        <a href="#fetchMoviesAndFavorites"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>fetchMoviesAndFavorites()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="73"
+                                    class="link-to-prism">src/app/movie-card/movie-card.component.ts:73</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hoverIcon"></a>
+                    <span class="name">
+                        <span ><b>hoverIcon</b></span>
+                        <a href="#hoverIcon"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>hoverIcon(movieId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, isHovered: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="201"
+                                    class="link-to-prism">src/app/movie-card/movie-card.component.ts:201</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>movieId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>The ID of the movie whose icon is being hovered.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                                <td>isHovered</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>A boolean indicating if the icon is being hovered or not.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isFavorite"></a>
+                    <span class="name">
+                        <span ><b>isFavorite</b></span>
+                        <a href="#isFavorite"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isFavorite(movieId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="102"
+                                    class="link-to-prism">src/app/movie-card/movie-card.component.ts:102</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>movieId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>The ID of the movie to check.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                <ul>
+<li>True if the movie is a favorite, otherwise false.</li>
+</ul>
+
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="65"
+                                    class="link-to-prism">src/app/movie-card/movie-card.component.ts:65</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onLogout"></a>
+                    <span class="name">
+                        <span ><b>onLogout</b></span>
+                        <a href="#onLogout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onLogout()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="189"
+                                    class="link-to-prism">src/app/movie-card/movie-card.component.ts:189</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openImageModal"></a>
+                    <span class="name">
+                        <span ><b>openImageModal</b></span>
+                        <a href="#openImageModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openImageModal(imageUrl: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="172"
+                                    class="link-to-prism">src/app/movie-card/movie-card.component.ts:172</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>imageUrl</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>The URL of the image to be displayed.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openInfoDialog"></a>
+                    <span class="name">
+                        <span ><b>openInfoDialog</b></span>
+                        <a href="#openInfoDialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openInfoDialog(title: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, content: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="125"
+                                    class="link-to-prism">src/app/movie-card/movie-card.component.ts:125</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>title</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>The title for the dialog.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                                <td>content</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>The content/body for the dialog.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeFromFavorites"></a>
+                    <span class="name">
+                        <span ><b>removeFromFavorites</b></span>
+                        <a href="#removeFromFavorites"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>removeFromFavorites(movieId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="155"
+                                    class="link-to-prism">src/app/movie-card/movie-card.component.ts:155</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>movieId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>The ID of the movie to be removed.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleFavorite"></a>
+                    <span class="name">
+                        <span ><b>toggleFavorite</b></span>
+                        <a href="#toggleFavorite"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toggleFavorite(movie: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="111"
+                                    class="link-to-prism">src/app/movie-card/movie-card.component.ts:111</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>movie</td>
+                                            <td>
+                                                            <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>The movie object to be toggled.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateLikedMoviesBasedOnFavorites"></a>
+                    <span class="name">
+                        <span ><b>updateLikedMoviesBasedOnFavorites</b></span>
+                        <a href="#updateLikedMoviesBasedOnFavorites"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateLikedMoviesBasedOnFavorites(favoriteMovieIds: string[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="91"
+                                    class="link-to-prism">src/app/movie-card/movie-card.component.ts:91</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>favoriteMovieIds</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>An array of favorite movie IDs.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="currentImageSrc"></a>
+                    <span class="name">
+                        <span ><b>currentImageSrc</b></span>
+                        <a href="#currentImageSrc"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/movie-card/movie-card.component.ts:52</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dialog"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>dialog</b></span>
+                        <a href="#dialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>MatDialog</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/movie-card/movie-card.component.ts:58</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hoveredMovieId"></a>
+                    <span class="name">
+                        <span ><b>hoveredMovieId</b></span>
+                        <a href="#hoveredMovieId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string | null</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/movie-card/movie-card.component.ts:40</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="likedMovies"></a>
+                    <span class="name">
+                        <span ><b>likedMovies</b></span>
+                        <a href="#likedMovies"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>literal type</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/movie-card/movie-card.component.ts:34</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="movies"></a>
+                    <span class="name">
+                        <span ><b>movies</b></span>
+                        <a href="#movies"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/movie-card/movie-card.component.ts:28</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showModal"></a>
+                    <span class="name">
+                        <span ><b>showModal</b></span>
+                        <a href="#showModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/movie-card/movie-card.component.ts:46</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { FetchApiDataService } from &#x27;../fetch-api-data.service&#x27;;
+import { MatSnackBar } from &#x27;@angular/material/snack-bar&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
+import { InfoDialogComponent } from &#x27;../info-dialog/info-dialog.component&#x27;;
+import { forkJoin, Observable } from &#x27;rxjs&#x27;;
+
+/**
+ * @name MovieCardComponent
+ * @description Component for rendering and managing movie cards.
+ */
+@Component({
+  selector: &#x27;app-movie-card&#x27;,
+  templateUrl: &#x27;./movie-card.component.html&#x27;,
+  styleUrls: [&#x27;./movie-card.component.scss&#x27;]
+})
+export class MovieCardComponent implements OnInit {
+
+  /** @docType property
+   * @name movies
+   * @description Array of movies fetched from the API.
+   */
+  movies: any[] &#x3D; [];
+
+  /** @docType property
+   * @name likedMovies
+   * @description Object mapping of movie IDs to boolean values indicating if they&#x27;re liked.
+   */
+  likedMovies: { [key: string]: boolean } &#x3D; {};
+
+  /** @docType property
+   * @name hoveredMovieId
+   * @description The ID of the currently hovered movie, or null if none.
+   */
+  hoveredMovieId: string | null &#x3D; null;
+
+  /** @docType property
+   * @name showModal
+   * @description Boolean flag for whether the modal should be displayed.
+   */
+  showModal: boolean &#x3D; false;
+
+  /** @docType property
+   * @name currentImageSrc
+   * @description The source URL of the current image to be displayed in the modal.
+   */
+  currentImageSrc: string &#x3D; &#x27;&#x27;;
+  
+  constructor(
+    private fetchApiData: FetchApiDataService,
+    private snackBar: MatSnackBar,
+    private router: Router,
+    public dialog: MatDialog
+  ) {}
+
+  /** @docType method
+   * @name ngOnInit
+   * @description Lifecycle hook to fetch movie and favorites data on component initialization.
+   */
+  ngOnInit(): void {
+    this.fetchMoviesAndFavorites();
+  }
+ 
+  /** @docType method
+   * @name fetchMoviesAndFavorites
+   * @description Fetch movies and favorite movies, and update the component state accordingly.
+   */
+  fetchMoviesAndFavorites(): void {
+    forkJoin({
+      allMovies: this.fetchApiData.getAllMovies(),
+      favoriteMovies: this.fetchApiData.getFavoriteMovies()
+    }).subscribe(({ allMovies, favoriteMovies }) &#x3D;&gt; {
+      this.movies &#x3D; allMovies;
+      this.updateLikedMoviesBasedOnFavorites(favoriteMovies);
+    }, (error: any) &#x3D;&gt; {
+      console.error(&#x27;Error fetching movies or favorites:&#x27;, error);
+      this.snackBar.open(&#x27;Error fetching movies or favorites&#x27;, &#x27;OK&#x27;, { duration: 2000 });
+    });
+  }
+
+  /** @docType method
+   * @name updateLikedMoviesBasedOnFavorites
+   * @description Update the &#x60;likedMovies&#x60; object based on the provided favorite movie IDs.
+   * @param favoriteMovieIds - An array of favorite movie IDs.
+   */
+  updateLikedMoviesBasedOnFavorites(favoriteMovieIds: string[]): void {
+    for (const id of favoriteMovieIds) {
+      this.likedMovies[id] &#x3D; true;
+    }
+  }
+  /** 
+   * @name isFavorite
+   * @description Determines if a movie is marked as favorite.
+   * @param movieId - The ID of the movie to check.
+   * @returns {boolean} - True if the movie is a favorite, otherwise false.
+   */
+  isFavorite(movieId: string): boolean {
+    return this.likedMovies[movieId];
+  }
+
+  /** 
+   * @name toggleFavorite
+   * @description Toggles a movie&#x27;s favorite status on or off.
+   * @param movie - The movie object to be toggled.
+   */
+  toggleFavorite(movie: any): void {
+    if (this.isFavorite(movie._id)) {
+      this.removeFromFavorites(movie._id);
+    } else {
+      this.addToFavorites(movie._id);
+    }
+  }
+
+  /** 
+   * @name openInfoDialog
+   * @description Opens an information dialog with the provided title and content.
+   * @param title - The title for the dialog.
+   * @param content - The content/body for the dialog.
+   */
+  openInfoDialog(title: string, content: string): void {
+    this.dialog.open(InfoDialogComponent, {
+      data: { title: title, content: content }
+    });
+  }
+
+  /** 
+   * @name addToFavorites
+   * @description Adds a movie to the user&#x27;s list of favorites.
+   * @param movieId - The ID of the movie to be added.
+   */
+  addToFavorites(movieId: string): void {
+    const username &#x3D; localStorage.getItem(&#x27;username&#x27;);
+    if (!username) return;
+    this.fetchApiData.addToFavorites(username, movieId).subscribe({
+      next: () &#x3D;&gt; {
+        this.likedMovies[movieId] &#x3D; true;
+        this.snackBar.open(&#x27;Added to favorites!&#x27;, &#x27;OK&#x27;, { duration: 2000 });
+      },
+      error: (error) &#x3D;&gt; {
+        this.snackBar.open(error, &#x27;OK&#x27;, { duration: 2000 });
+      }
+    });
+  }
+
+  /** 
+   * @name removeFromFavorites
+   * @description Removes a movie from the user&#x27;s list of favorites.
+   * @param movieId - The ID of the movie to be removed.
+   */
+  removeFromFavorites(movieId: string): void {
+    const username &#x3D; localStorage.getItem(&#x27;username&#x27;);
+    if (!username) return;
+    this.fetchApiData.removeFromFavorites(username, movieId).subscribe({
+      next: () &#x3D;&gt; {
+        this.likedMovies[movieId] &#x3D; false;
+        this.snackBar.open(&#x27;Removed from favorites!&#x27;, &#x27;OK&#x27;, { duration: 2000 });
+      },
+      error: (error) &#x3D;&gt; this.snackBar.open(error, &#x27;OK&#x27;, { duration: 2000 })
+    });
+  }
+
+  /** 
+   * @name openImageModal
+   * @description Opens a modal displaying a larger version of the provided image.
+   * @param imageUrl - The URL of the image to be displayed.
+   */
+  openImageModal(imageUrl: string): void {
+    this.currentImageSrc &#x3D; imageUrl;
+    this.showModal &#x3D; true;
+  }
+
+  /** 
+   * @name closeImageModal
+   * @description Closes the image modal.
+   */
+  closeImageModal(): void {
+    this.showModal &#x3D; false;
+  }
+
+  /** 
+   * @name onLogout
+   * @description Logs the user out by removing authentication tokens and navigating to the login page.
+   */
+  onLogout(): void {
+    localStorage.removeItem(&#x27;token&#x27;);
+    localStorage.removeItem(&#x27;username&#x27;);
+    this.router.navigate([&#x27;/login&#x27;]);
+  }
+
+  /** 
+   * @name hoverIcon
+   * @description Handles the hover state for movie icons.
+   * @param movieId - The ID of the movie whose icon is being hovered.
+   * @param isHovered - A boolean indicating if the icon is being hovered or not.
+   */
+  hoverIcon(movieId: string, isHovered: boolean): void {
+    this.hoveredMovieId &#x3D; isHovered ? movieId : null;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;movie-container&quot;&gt;
+    &lt;!-- Image Modal (initially hidden) --&gt;
+    &lt;div class&#x3D;&quot;image-modal&quot; *ngIf&#x3D;&quot;showModal&quot;&gt;
+        &lt;img [src]&#x3D;&quot;currentImageSrc&quot; alt&#x3D;&quot;Full Size Image&quot; (click)&#x3D;&quot;closeImageModal()&quot;/&gt;
+        &lt;button (click)&#x3D;&quot;closeImageModal()&quot;&gt;Close&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;movie-scroll&quot;&gt;
+        &lt;mat-card *ngFor&#x3D;&quot;let movie of movies&quot; class&#x3D;&quot;movie-card&quot;&gt;
+        &lt;!-- Image with click event --&gt;
+        &lt;img 
+            class&#x3D;&quot;movie-image&quot; 
+            src&#x3D;&quot;{{movie?.ImageURL}}&quot; 
+            alt&#x3D;&quot;{{movie?.Title}}&quot; 
+            (click)&#x3D;&quot;openImageModal(movie?.ImageURL)&quot; /&gt;
+
+        &lt;!-- Then the title and director&#x27;s name --&gt;
+        &lt;mat-card-header&gt;
+            &lt;mat-card-title&gt;{{movie?.Title}}&lt;/mat-card-title&gt;
+            &lt;mat-card-subtitle&gt;Genre: {{movie?.Genre?.Name}}&lt;/mat-card-subtitle&gt;
+            &lt;mat-card-subtitle&gt;Directed by: {{movie?.Director?.Name}}&lt;/mat-card-subtitle&gt;
+        &lt;/mat-card-header&gt;
+        &lt;mat-card-actions&gt;
+            &lt;button 
+                mat-button 
+                color&#x3D;&quot;primary&quot; 
+                [matTooltip]&#x3D;&quot;movie?.Genre?.Description&quot; 
+                (click)&#x3D;&quot;openInfoDialog(movie?.Genre?.Name, movie?.Genre?.Description)&quot;&gt;
+                Genre
+            &lt;/button&gt;
+            &lt;button 
+                mat-button 
+                color&#x3D;&quot;primary&quot; 
+                [matTooltip]&#x3D;&quot;movie?.Director?.Bio&quot; 
+                (click)&#x3D;&quot;openInfoDialog(movie?.Director?.Name, movie?.Director?.Bio)&quot;&gt;
+                Director
+            &lt;/button&gt;
+            &lt;button 
+                mat-button 
+                color&#x3D;&quot;primary&quot; 
+                [matTooltip]&#x3D;&quot;movie?.Description&quot; 
+                (click)&#x3D;&quot;openInfoDialog(&#x27;Synopsis&#x27;, movie?.Description)&quot;&gt;
+                Synopsis
+            &lt;/button&gt;
+        
+            &lt;span (click)&#x3D;&quot;toggleFavorite(movie)&quot;&gt;
+                &lt;mat-icon [ngClass]&#x3D;&quot;{&#x27;is-favorite&#x27;: isFavorite(movie?._id)}&quot; class&#x3D;&quot;favorite-icon&quot;&gt;favorite&lt;/mat-icon&gt;
+            &lt;/span&gt;
+        &lt;/mat-card-actions&gt;
+    &lt;/mat-card&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./movie-card.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.movie-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100vw;
+  scroll-snap-type: x mandatory;
+  background-color: rgb(176, 188, 228); /* Dark gray background */
+  padding: 20px 20px;  /* Space on top &amp; bottom, and now also on the sides */
+  overflow-y: hidden;
+}
+.movie-scroll {
+  display: inline-flex;
+}
+
+
+.movies-horizontal-scroll {
+  display: flex;
+  flex-direction: row; /* Ensure horizontal layout */
+  flex: 0 0 100vw; /* Each movie takes up 100% of the viewport width */
+  box-sizing: border-box; /* Include padding and border in element&#x27;s total width and height */
+}
+
+
+.movie-card {
+  flex: 0 0 calc(100vw - 40px);  /* Adjusted width to allow for the padding on the container */
+  white-space: normal;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: rgb(240, 240, 240);
+  box-shadow: 0 -8px 12px rgba(203, 203, 203, 0.2), 0 8px 12px rgba(203, 203, 203, 0.2); /* Shadows on both top and bottom */
+  height: calc(100vh - 100px);
+  margin: 0 10px;  /* Space between cards */
+  border-radius: 10px;
+  scroll-snap-align: start;
+
+  &amp;:hover {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  }
+}
+
+
+
+.movie-image {
+  width: 70%;
+  max-height: 65%; /* Decreased a little to accommodate padding */
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  padding-top: 15px; /* Add padding to the top */
+}
+
+mat-card-header {
+  /* Adjust padding or font-sizes if needed */
+  margin-bottom: 10px;
+}
+
+mat-card-actions {
+  /* Adjust padding or font-sizes if needed */
+  button {
+      margin-right: 10px;
+  }
+
+  mat-icon {
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &amp;.liked, &amp;:hover, &amp;.hovered {
+        color: #ff9999;
+    }
+}
+}
+
+.mat-tooltip {
+  white-space: pre-line !important;
+}
+
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.image-modal img {
+  max-width: 90vw;  /* Allow for some margin around image */
+  max-height: 90vh;
+}
+
+.image-modal button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.favorite-icon {
+  color: grey; /* default color */
+}
+
+.is-favorite {
+  color: red; /* color for liked movies */
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="movie-container">    <!-- Image Modal (initially hidden) -->    <div class="image-modal" *ngIf="showModal">        <img [src]="currentImageSrc" alt="Full Size Image" (click)="closeImageModal()"/>        <button (click)="closeImageModal()">Close</button>    </div>    <div class="movie-scroll">        <mat-card *ngFor="let movie of movies" class="movie-card">        <!-- Image with click event -->        <img             class="movie-image"             src="{{movie?.ImageURL}}"             alt="{{movie?.Title}}"             (click)="openImageModal(movie?.ImageURL)" />        <!-- Then the title and director\'s name -->        <mat-card-header>            <mat-card-title>{{movie?.Title}}</mat-card-title>            <mat-card-subtitle>Genre: {{movie?.Genre?.Name}}</mat-card-subtitle>            <mat-card-subtitle>Directed by: {{movie?.Director?.Name}}</mat-card-subtitle>        </mat-card-header>        <mat-card-actions>            <button                 mat-button                 color="primary"                 [matTooltip]="movie?.Genre?.Description"                 (click)="openInfoDialog(movie?.Genre?.Name, movie?.Genre?.Description)">                Genre            </button>            <button                 mat-button                 color="primary"                 [matTooltip]="movie?.Director?.Bio"                 (click)="openInfoDialog(movie?.Director?.Name, movie?.Director?.Bio)">                Director            </button>            <button                 mat-button                 color="primary"                 [matTooltip]="movie?.Description"                 (click)="openInfoDialog(\'Synopsis\', movie?.Description)">                Synopsis            </button>                    <span (click)="toggleFavorite(movie)">                <mat-icon [ngClass]="{\'is-favorite\': isFavorite(movie?._id)}" class="favorite-icon">favorite</mat-icon>            </span>        </mat-card-actions>    </mat-card></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'InfoDialogComponent', 'selector': 'app-info-dialog'},{'name': 'LoginFormComponent', 'selector': 'app-login-form'},{'name': 'MovieCardComponent', 'selector': 'app-movie-card'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'},{'name': 'UserRegistrationFormComponent', 'selector': 'app-user-registration-form'},{'name': 'WelcomePageComponent', 'selector': 'app-welcome-page'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'MovieCardComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'MovieCardComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -27,13 +27,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InfoDialogComponent } from './info-dialog/info-dialog.component';
 
 
-
+/**
+ * Routing configuration for the application.
+ */
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
   { path: 'movies', component: MovieCardComponent },
   { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
 ];
+
+/**
+ * The root module of the application.
+ * Declares components, imports necessary modules, provides services, and sets the bootstrap component.
+ */
 
 @NgModule({
   declarations: [
@@ -63,6 +70,11 @@ MatTooltipModule,
     RouterModule.forRoot(appRoutes),
     MatToolbarModule
   ],
+
+    /**
+   * Provides the GlobalErrorHandler for handling errors throughout the application.
+   */
+  
   providers: [
     {
       provide: ErrorHandler,
