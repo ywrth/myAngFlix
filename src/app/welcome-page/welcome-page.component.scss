@@ -1,0 +1,24 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column; /* This will ensure the navbar and main content stack vertically */
+}
+
+app-navbar { /* Assuming your navbar component selector is 'app-navbar' */
+  height: 60px; /* This is an example, adjust if your navbar has a different height */
+}
+
+.main-container {
+  flex-grow: 1; /* This will make the main container occupy all available space except for the navbar's height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-page {
+  text-align: center;
+}

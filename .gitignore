@@ -1,0 +1,39 @@
+# Node modules
+/node_modules/
+
+# Angular Build output
+/dist/
+/out-tsc/
+/myAngFlix.git/
+
+# Angular CLI cache (starting Angular v13)
+/.angular/
+/.angular/cache/
+
+# IDE - Visual Studio Code
+.vscode/
+
+# IDE - WebStorm/IntelliJ
+.idea/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.log
+*.tmp
+
+# Environment configuration files
+.env
+*.env.local
+*.env.staging
+*.env.prod
+
+
+# End of .gitignore

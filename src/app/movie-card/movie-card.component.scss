@@ -1,0 +1,110 @@
+.movie-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100vw;
+  scroll-snap-type: x mandatory;
+  background-color: rgb(176, 188, 228); /* Dark gray background */
+  padding: 20px 20px;  /* Space on top & bottom, and now also on the sides */
+  overflow-y: hidden;
+}
+.movie-scroll {
+  display: inline-flex;
+}
+
+
+.movies-horizontal-scroll {
+  display: flex;
+  flex-direction: row; /* Ensure horizontal layout */
+  flex: 0 0 100vw; /* Each movie takes up 100% of the viewport width */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+
+.movie-card {
+  flex: 0 0 calc(100vw - 40px);  /* Adjusted width to allow for the padding on the container */
+  white-space: normal;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: rgb(240, 240, 240);
+  box-shadow: 0 -8px 12px rgba(203, 203, 203, 0.2), 0 8px 12px rgba(203, 203, 203, 0.2); /* Shadows on both top and bottom */
+  height: calc(100vh - 100px);
+  margin: 0 10px;  /* Space between cards */
+  border-radius: 10px;
+  scroll-snap-align: start;
+
+  &:hover {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  }
+}
+
+
+
+.movie-image {
+  width: 70%;
+  max-height: 65%; /* Decreased a little to accommodate padding */
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  padding-top: 15px; /* Add padding to the top */
+}
+
+mat-card-header {
+  /* Adjust padding or font-sizes if needed */
+  margin-bottom: 10px;
+}
+
+mat-card-actions {
+  /* Adjust padding or font-sizes if needed */
+  button {
+      margin-right: 10px;
+  }
+
+  mat-icon {
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &.liked, &:hover, &.hovered {
+        color: #ff9999;
+    }
+}
+}
+
+.mat-tooltip {
+  white-space: pre-line !important;
+}
+
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.image-modal img {
+  max-width: 90vw;  /* Allow for some margin around image */
+  max-height: 90vh;
+}
+
+.image-modal button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.favorite-icon {
+  color: grey; /* default color */
+}
+
+.is-favorite {
+  color: red; /* color for liked movies */
+}
